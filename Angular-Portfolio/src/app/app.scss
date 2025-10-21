@@ -1,0 +1,66 @@
+/* Keep Bootstrap container full width */
+.container-web-size {
+  max-width: 100%;
+}
+
+.row-extend {
+  display: flex;
+  flex-wrap: nowrap; // keep sidebar + content side by side on desktop
+}
+
+/* Sidebar */
+.side-bar {
+  max-width: fit-content;
+  position: sticky;
+  top: 0;
+  height: 100dvh;           // dynamic viewport to reduce mobile bar jumps
+  background-color: #fff;
+  z-index: 1050;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  @media (max-width: 767.98px) {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100dvh;
+    transition: left 0.3s ease;
+    will-change: left;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.25);
+
+    &.open { left: 0; }
+  }
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; // below sidebar (1050) and toggle (1200)
+}
+
+/* Toggle button */
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1200;
+}
+
+@media (min-width: 768px) {
+  .sidebar-toggle-btn { display: none; }
+}
+
+/* Main content */
+.content-container {
+  min-width: 0;
+  @media (max-width: 767.98px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+

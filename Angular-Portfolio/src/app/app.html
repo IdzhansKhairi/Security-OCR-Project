@@ -1,0 +1,27 @@
+<!-- Sidebar toggle button for mobile -->
+<button class="btn btn-dark d-md-none sidebar-toggle-btn m-2 mb-0" (click)="toggleSidebar()" [attr.aria-expanded]="sidebarOpen" aria-controls="app-sidebar" aria-label="Toggle navigation">
+    <i [class]="sidebarOpen ? 'bi bi-x-lg' : 'bi bi-list'"></i>
+</button>
+
+<div class="container px-0 container-web-size">
+    <div class="row-extend d-flex">
+        <!-- Sidebar -->
+        <div id="app-sidebar" class="col-auto side-bar" [class.open]="sidebarOpen" aria-label="Sidebar">
+            <app-sidebar></app-sidebar>
+        </div>
+
+        <!-- Scrim overlay (mobile only) -->
+        <div
+        class="overlay d-md-none"
+        *ngIf="sidebarOpen"
+        (click)="toggleSidebar()"
+        aria-hidden="true"
+        ></div>
+
+        <!-- Main content -->
+        <div class="col p-3 content-container" [attr.aria-hidden]="sidebarOpen ? 'true' : null">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.resume-view {
+    width: 100%;
+    height: full;
+    border: none;
+}
+
+.content {
+    width: max(60%, 700px);
+    max-width: 90%;
+}
+
+.resume-title {
+    justify-content: center;
+}
+
+// Phone size
+@media (max-width: 768px) {
+    .resume-title {
+        justify-content: left;
+    }
+}

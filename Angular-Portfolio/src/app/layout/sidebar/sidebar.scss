@@ -1,0 +1,38 @@
+:host, .sidebar {
+    height: 100dvh;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    max-height: 100dvh;
+    overflow: auto;
+
+    .nav-link {
+        display: block;
+        padding: 0.5rem 0;
+        opacity: 0.85;
+
+        &.active,
+        &:hover {
+        opacity: 1;
+        font-weight: 600;
+        }
+    }
+
+    // Mobile styling
+    @media (max-width: 767.98px) {
+        .mobile-top-padding {
+            padding-top: 75px !important;
+        }
+    }
+}
+
+.sidebar-close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1100; // above sidebar content
+}
+
+

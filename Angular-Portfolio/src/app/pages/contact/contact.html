@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="content mt-5">
+            <h1 class="text-dark">Hi there!</h1>
+            <h5 class="text-dark">I enjoy sharing my passion and knowledge, and I’m always open to meaningful discussions that help us learn and grow together.</h5>
+            <p class="text-secondary mb-0 pb-0">If you’d like to talk about Azure AI Foundry, web development, tech ideas, music, or even climbing, feel free to reach out through any of the methods below. I’d be happy to connect, exchange ideas, or just have a friendly chat. You can also drop me a message directly using the email form below.</p>
+
+            <div class="mt-4">
+                <h5 class="text-secondary">Alternatively, connect with me:</h5>
+                <div class="d-flex mt-2 gap-3 connect-buttons">
+                    <a href="https://www.linkedin.com/in/idzhans-khairi" target="_blank" class="btn btn-outline-dark d-flex align-items-center">
+                        <i class="bi bi-linkedin me-2"></i> LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com/hanspanjat" target="_blank" class="btn btn-outline-dark d-flex align-items-center">
+                        <i class="bi bi-instagram me-2"></i> Instagram
+                    </a>
+                    <a href="https://wa.me/60195234811" target="_blank" class="btn btn-outline-dark d-flex align-items-center">
+                        <i class="bi bi-whatsapp me-2"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="card my-4">
+                <div class="card-header">
+                    <h5 class="text-secondary">Submit your enquiry</h5>
+                </div>
+                <div class="card-body">
+                    <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)">
+                        <div class="form-group py-3">
+                            <input type="text" class="form-control" name="senderName" id="senderName" placeholder="*Your Name" [(ngModel)]="senderName" #name="ngModel" required [ngClass]="{'is-invalid': name.invalid && (name.dirty || name.touched)}">
+
+                            <div class="contact-info d-flex align-items-center justify-content-between mt-3">
+                                <input type="email" class="contact-form form-control me-2" name="senderEmail" id="senderEmail" placeholder="*Your Email Address" [(ngModel)]="senderEmail" required email #email="ngModel" required [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched)}">
+                                <input type="tel" class="contact-form contact-form-2 form-control ms-2" name="senderPhone" id="senderPhone" placeholder="Your Phone Number (Optional)" [(ngModel)]="senderPhone" #phone="ngModel">
+                            </div>
+                            
+                            <select class="form-select mt-3" name="senderTopic" id="senderTopic" [(ngModel)]="senderTopic" required>
+                                <option value="" disabled>*Select your topic</option>
+                                <option>Technology Discussion</option>
+                                <option>Collaboration</option>
+                                <option>Climbing Related</option>
+                            </select>
+
+                            <!-- Email Content Here -->
+                            <div class="mt-5">
+                                <h5 class="text-secondary">Email Content:</h5>
+                                <input type="text" class="form-control" name="emailTitle" id="emailTitle" placeholder="*Title" [(ngModel)]="emailTitle" required #title="ngModel" required [ngClass]="{'is-invalid': title.invalid && (title.dirty || title.touched)}">
+                                <textarea class="form-control mt-3" name="emailContent" id="emailContent" placeholder="*Message here" rows="6" [(ngModel)]="emailContent" required #content="ngModel" required [ngClass]="{'is-invalid': content.invalid && (content.dirty || content.touched)}"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="d-flex justify-content-end">
+                                <!-- Real Button -->
+                                <button type="submit" class="btn btn-outline-dark mt-3" [disabled]="contactForm.invalid">Submit</button>
+
+                                <!-- Dummy Button -->
+                                <!-- <button type="submit" class="btn btn-primary mt-3" disabled>Submit</button> -->
+                            </div>
+                            <!-- <div class="mt-2 text-end">
+                                <h5 class="text-danger small">In production. Button disabled to avoid spam</h5>
+                            </div> -->
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

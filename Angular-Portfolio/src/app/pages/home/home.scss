@@ -1,0 +1,108 @@
+.personal-image {
+  width: 300px;
+  aspect-ratio: 1 / 1;   // keeps it square
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 50%;    // keeps it circular
+  max-width: 100%;    // don’t overflow container
+}
+
+.email-text {
+  white-space: normal;      // allow wrapping
+  word-break: break-word;   // break long words or emails if needed
+  overflow-wrap: anywhere;  // fallback for older browsers
+}
+
+// When it changed to phone size
+@media (max-width: 768px) {
+  .personal-image {
+    width: 200px;     /* smaller height on mobile */
+  }
+  .about-me {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .intro-info-section {
+    display: flex;              // d-flex
+    flex-direction: column;     // flex-column
+    align-items: center;        // align-items-center
+    text-align: center;         // text-center
+  }
+  .basic-info {
+    align-items: center;
+  }
+
+  .title-container {
+    margin-top: 1.5rem;
+    display: block !important;
+  }
+
+  .remove-space {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .r-card-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+}
+
+.education-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.icon-circle {
+  width: 35px;   /* circle size */
+  height: 35px;
+  font-size: 17px; /* icon size */
+}
+
+.carousel {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.carousel-inner img {
+  height: 400px;       /* uniform height */
+  object-fit: cover; /* keep ratio */
+  background-color: #fff;
+}
+
+/* For smaller screens (phones/tablets) */
+@media (max-width: 768px) {
+  .carousel-inner img {
+    height: 200px;     /* smaller height on mobile */
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mobile-top-margin {
+    margin-top: 75px;
+  }
+}
+
+/* Rotate the chevron when the collapse is shown */
+a[data-bs-toggle="collapse"] .bi-chevron-down {
+  transition: transform 0.3s;
+}
+
+a[data-bs-toggle="collapse"]:not(.collapsed) .bi-chevron-down {
+  transform: rotate(180deg); /* upside down */
+}
+
+.nav-tabs .nav-link.active {
+  font-weight: bold;
+}

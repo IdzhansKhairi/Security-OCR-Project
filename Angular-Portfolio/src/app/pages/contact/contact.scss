@@ -1,0 +1,37 @@
+.content {
+    width: max(60%, 600px);
+    max-width: 90%;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+
+    input {
+      width: 100%;        // full width on mobile
+      margin-bottom: 0.5rem; // spacing between inputs
+    }
+  }
+
+  .contact-form {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .contact-form-2 {
+    margin-top: 1rem !important;
+  }
+
+  .connect-buttons {
+    flex-direction: column !important;
+    gap: 0.5rem; // spacing between buttons vertically
+  }
+
+  .content {
+    margin-top: 0;
+  }
+}
+
+
