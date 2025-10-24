@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 
 // Components for routes import
-import { Home } from './pages/home/home';
+import { Register } from './pages/register/register';
 import { Contact } from './pages/contact/contact';
 import { Sidebar } from './layout/sidebar/sidebar';
 import { Resume } from './pages/resume/resume';
@@ -19,7 +19,7 @@ import { Resume } from './pages/resume/resume';
 @NgModule({
   declarations: [
     App,
-    Home,
+    Register,
     Contact,
     Sidebar,
     Resume

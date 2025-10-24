@@ -1,26 +1,31 @@
 <div class="sidebar p-3 bg-dark text-white mobile-top-padding">
-  <h5 class="text-secondary small pb-3">Muhammad Idzhans Khairi</h5>
+  <h5 class="text-secondary pb-3 text-center">OCR Security System</h5>
 
-  <!-- Home -->
+  <!-- Main Section -->
   <div class="mb-4">
-    <a class="nav-link text-white mb-2" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <i class="bi bi-house me-2"></i> Home
+    <a class="nav-link text-white" routerLink="/registration" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <i class="bi bi-pencil-square me-2"></i> Registration
+    </a>
+    <a class="nav-link text-white" routerLink="/register-table" routerLinkActive="active">
+      <i class="bi bi-table me-2"></i> Records
     </a>
   </div>
 
-  <!-- Me Section -->
+  <!-- Admin Section -->
   <div class="mb-4">
-    <h6 class="text-uppercase text-secondary small">Me</h6>
-    <a class="nav-link text-white" routerLink="/resume" routerLinkActive="active">
-      <i class="bi bi-file-earmark-person me-2"></i> Resume
+    <h6 class="text-uppercase text-secondary small">Admin</h6>
+
+    <a class="nav-link text-white" routerLink="/dashboard" routerLinkActive="active">
+      <i class="bi bi-file-earmark-person me-2"></i> Dashboard
     </a>
-    <a class="nav-link text-white" routerLink="/contact" routerLinkActive="active">
-      <i class="bi bi-at me-2"></i> Contact
+    <a class="nav-link text-white" routerLink="/data-viewer" routerLinkActive="active">
+      <i class="bi bi-diagram-3 me-2"></i> Guard Management
     </a>
+
   </div>
 
   <!-- Social Section -->
-  <div class="mb-4">
+  <!-- <div class="mb-4">
 
     <h6 class="text-uppercase text-secondary small">Social</h6>
 
@@ -39,6 +44,6 @@
       <i class="bi bi-arrow-up-right text-secondary small"></i>
     </a>
 
-  </div>
+  </div> -->
   
 </div>
